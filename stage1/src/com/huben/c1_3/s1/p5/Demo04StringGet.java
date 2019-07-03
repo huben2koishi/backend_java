@@ -7,7 +7,7 @@ public class Demo04StringGet {
         String str1 = "komeijikoishi";
         System.out.println("字符串的长度为: " + str1.length());
 
-        // public String cancat(String str) 拼接字符串
+        // public String concat(String str) 拼接字符串
         String str2 = "hello";
         System.out.println(str2.concat(" world"));
 
