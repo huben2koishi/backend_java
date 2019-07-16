@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+</head>
+<body>
+
+<form action="#">
+    <input type="number" name="number" id="number" placeholder="请输入编号">
+    <input type="text" name="name" id="name" placeholder="请输入姓名">
+    <input type="text" name="gender" id="gender" placeholder="请输入性别">
+    <input type="button" id="add" value="添加">
+</form>
+
+<table border="1px solid">
+    <caption>学生信息表</caption>
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>小明</td>
+        <td>男</td>
+        <td><a href="javascript:void(0)" onclick="del(this)">删除</a></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>小红</td>
+        <td>女</td>
+        <td><a href="javascript:void(0)" onclick="del(this)">删除</a></td>
+    </tr>
+</table>
+
+<script>
+    document.getElementById("add").onclick = function () {
+        let number = document.getElementById("number").value;
+        let name = document.getElementById("name").value;
+        let gender = document.getElementById("gender").value;
+
+        let table = document.getElementsByTagName("table")[0];
+
+        table.innerHTML += "<tr>\n" +
+            "        <td>" + number + "</td>\n" +
+            "        <td>" + name + "</td>\n" +
+            "        <td>" + gender + "</td>\n" +
+            "        <td><a href=\"javascript:void(0);\" onclick=\"del(this);\" >删除</a></td>\n" +
+            "    </tr>";
+    };
+
+    function del(obj) {
+        let table = obj.parentElement.parentElement.parentElement;
+        let tr = obj.parentElement.parentElement;
+        table.removeChild(tr);
+    }
+</script>
+
+</body>
+</html>

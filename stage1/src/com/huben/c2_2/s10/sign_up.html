@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sign_up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="rg_layout">
+    <div class="rg_left">
+        <p>新用户注册</p>
+        <p>User Register</p>
+    </div>
+
+    <div class="rg_center">
+        <div class="rg_form">
+            <form action="#" id="form" method="get">
+                <table>
+                    <tr>
+                        <td class="td-left">
+                            <label for="username">用户名</label>
+                        </td>
+                        <td class="td-right">
+                            <input id="username" name="username" type="text" placeholder="请输入账号">
+                            <span id="error_username"> </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-left">
+                            <label for="password">密码</label>
+                        </td>
+                        <td class="td-right">
+                            <input id="password" name="password" type="password" placeholder="请输入密码">
+                            <span id="error_password"> </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-left">
+                            <label for="email">邮箱</label>
+                        </td>
+                        <td class="td-right">
+                            <input id="email" name="email" type="email" placeholder="请输入Email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-left">
+                            <label for="name">姓名</label>
+                        </td>
+                        <td class="td-right">
+                            <input id="name" name="name" type="text" placeholder="请输入真实姓名">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-left">
+                            <label for="phonenumber">手机号</label>
+                        </td>
+                        <td class="td-right">
+                            <input id="phonenumber" name="phonenumber" type="tel" placeholder="请输入手机号">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-left">
+                            <label>性别</label>
+                        </td>
+                        <td class="td-right">
+                            <input id="male" type="radio" name="gender" value="male">
+                            <label for="male">男</label>
+                            <input id="female" type="radio" name="gender" value="female">
+                            <label for="female">女</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-left">
+                            <label for="date">出生日期</label>
+                        </td>
+                        <td class="td-right">
+                            <input id="date" name="date" type="date">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-left">
+                            <label for="code">验证码</label>
+                        </td>
+                        <td class="td-right">
+                            <input id="code" name="code" type="text">
+                            <img src="image/verify_code.jpg" alt="验证码">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input id="submit" type="submit" value="注册">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <div class="rg_right">
+        <p>已有账号？<a href="#">立即登录</a></p>
+    </div>
+</div>
+
+<script>
+    document.getElementById("form").onsubmit = function () {
+        return checkName() && checkPassword();
+    };
+
+    document.getElementById("username").onblur = checkName;
+    document.getElementById("password").onblur = checkPassword;
+
+    function checkName() {
+        let username = document.getElementById("username").value;
+        let reg = /^\w{6,12}$/;
+        let error = document.getElementById("error_username");
+        if (reg.test(username)) {
+            error.innerHTML="格式正确";
+            error.style.color="green";
+        }else {
+            error.innerHTML="格式错误";
+            error.style.color="red";
+        }
+        return error;
+    }
+
+    function checkPassword() {
+        let password = document.getElementById("password").value;
+        let reg = /^\w{10,20}$/;
+        let error = document.getElementById("error_password");
+        if (reg.test(password)) {
+            error.innerHTML="格式正确";
+            error.style.color="green";
+        }else {
+            error.innerHTML="格式错误";
+            error.style.color="red";
+        }
+        return error;
+    }
+
+</script>
+
+</body>
+</html>

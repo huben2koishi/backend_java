@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+</head>
+<body>
+
+<img id="light" src="img/off.gif" alt="">
+
+<script>
+    let light = document.getElementById("light");
+    let isLight = false;
+    light.onclick = function () {
+        if (isLight) {
+            light.src = "img/off.gif";
+            isLight = false;
+        } else {
+            light.src = "img/on.gif";
+            isLight = true;
+        }
+    }
+</script>
+
+</body>
+</html>

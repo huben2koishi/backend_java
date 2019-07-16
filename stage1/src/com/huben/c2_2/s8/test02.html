@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test02</title>
+</head>
+<body>
+<p>
+    <span id="count">5</span>
+    秒之后跳转
+</p>
+
+<script>
+    let count = document.getElementById("count");
+    let num =5;
+    setInterval(jump,1000);
+
+    function jump() {
+        num--;
+        count.innerText=num+"";
+        if (num==0){
+            location.href="http://ww.baidu.com";
+        }
+    }
+</script>
+
+</body>
+</html>
