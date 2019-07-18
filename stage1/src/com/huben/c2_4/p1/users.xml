@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml-stylesheet type="text/css" href="users.css" ?>-->
+
+<users>
+    <user>
+        <name id="1">Mike</name>
+        <age>15</age>
+        <gender>male</gender>
+    </user>
+
+    <user>
+        <name id="2">Mary</name>
+        <age>16</age>
+        <gender>female</gender>
+    </user>
+    <user>
+        <name id="3">John</name>
+        <age>13</age>
+        <gender>male</gender>
+        <code>
+            <![CDATA[
+
+                if (a > b && a > c) {
+                    System.out.println("OK!");
+                }
+
+            ]]>
+        </code>
+    </user>
+</users>
