@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class Demo03File {
     public static void main(String[] args) {
-        File f1 = new File("stage1/src/com/huben/c1_3/s6/p1/file/test.md");
+        File f1 = new File("stage1/src/com/huben/c1_3/s6/p1/file/servlet.demo.md");
         try {
             System.out.println(f1.createNewFile()); // true
         } catch (IOException e) {

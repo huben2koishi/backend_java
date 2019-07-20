@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Demo02BufferedInputStream {
     public static void main(String[] args) throws IOException {
-        FileInputStream fis = new FileInputStream("stage1/src/com/huben/c1_3/s6/p7/test.txt");
+        FileInputStream fis = new FileInputStream("stage1/src/com/huben/c1_3/s6/p7/servlet.demo.txt");
 
         BufferedInputStream bis = new BufferedInputStream(fis);
 

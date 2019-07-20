@@ -12,7 +12,7 @@ public class Demo02Properties {
         prop.setProperty("job","driver");
         prop.setProperty("age","24");
 
-        FileWriter fw = new FileWriter("stage1/src/com/huben/c1_3/s6/p6/test.txt");
+        FileWriter fw = new FileWriter("stage1/src/com/huben/c1_3/s6/p6/servlet.demo.txt");
 
         prop.store(fw,"save");
 

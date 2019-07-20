@@ -14,7 +14,7 @@ public class Demo03ArrayListMethod {
 
         list.add("world");
         list.add("Java");
-        list.add("test");
+        list.add("servlet.demo");
 
         // public E get(int index) 从集合获取元素, 参数为索引
         String name = list.get(2);

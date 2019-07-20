@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class Demo02Writer {
     public static void main(String[] args) throws IOException {
-        FileWriter writer = new FileWriter("stage1/src/com/huben/c1_3/s6/p5/test.txt",true);
+        FileWriter writer = new FileWriter("stage1/src/com/huben/c1_3/s6/p5/servlet.demo.txt",true);
 
         writer.write(97);
 

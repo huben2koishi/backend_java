@@ -4,7 +4,7 @@ import java.io.File;
 
 public class Demo02File {
     public static void main(String[] args) {
-        File f1 = new File("stage1/src/com/huben/c1_3/s6/p1/file/test.txt");
+        File f1 = new File("stage1/src/com/huben/c1_3/s6/p1/file/servlet.demo.txt");
         File f2 = new File("stage1/src/com/huben/c1_3/s6/p1/file/");
 
         System.out.println(f1.exists());

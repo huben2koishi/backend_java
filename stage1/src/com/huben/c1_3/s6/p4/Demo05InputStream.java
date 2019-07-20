@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 public class Demo05InputStream {
     public static void main(String[] args) throws IOException {
-        File file = new File("stage1/src/com/huben/c1_3/s6/p4/test.md");
+        File file = new File("stage1/src/com/huben/c1_3/s6/p4/servlet.demo.md");
 
         FileInputStream stream = new FileInputStream(file);
 

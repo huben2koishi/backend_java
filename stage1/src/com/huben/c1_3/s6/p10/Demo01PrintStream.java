@@ -5,7 +5,7 @@ import java.io.PrintStream;
 
 public class Demo01PrintStream {
     public static void main(String[] args) throws FileNotFoundException {
-        PrintStream ps = new PrintStream("stage1/src/com/huben/c1_3/s6/p10/test.txt");
+        PrintStream ps = new PrintStream("stage1/src/com/huben/c1_3/s6/p10/servlet.demo.txt");
 
         ps.write(97);
         ps.print(97);
