@@ -13,7 +13,7 @@ public class Test01Check {
         Method[] methods = aClass.getMethods();
 
         int count =0;
-        BufferedWriter writer = new BufferedWriter(new FileWriter("stage1/src/com/huben/c1_3/s9/p3/bug.txt"));
+        BufferedWriter writer = new BufferedWriter(new FileWriter("stage1/src/com/huben/c1_3/p9/p3/bug.txt"));
 
         for (Method method : methods) {
             if (method.isAnnotationPresent(check.class)) {

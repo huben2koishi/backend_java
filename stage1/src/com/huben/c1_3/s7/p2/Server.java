@@ -21,7 +21,7 @@ public class Server {
                     InputStream inputStream = accept.getInputStream();
                     OutputStream outputStream = accept.getOutputStream();
 
-                    File file = new File("stage1/src/com/huben/c1_3/s7/p2/server");
+                    File file = new File("stage1/src/com/huben/c1_3/p7/p2/server");
                     if (!file.exists()) {
                         file.mkdirs();
                     }

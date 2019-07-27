@@ -24,7 +24,7 @@ public class Server {
                     String s = new BufferedReader(new InputStreamReader(is)).readLine().split(" ")[1].substring(1);
                     System.out.println(s);
 
-                    FileInputStream fis = new FileInputStream("stage1/src/com/huben/c1_3/s7/p3/" + s);
+                    FileInputStream fis = new FileInputStream("stage1/src/com/huben/c1_3/p7/p3/" + s);
 
                     byte[] bytes = new byte[1024];
                     int len;

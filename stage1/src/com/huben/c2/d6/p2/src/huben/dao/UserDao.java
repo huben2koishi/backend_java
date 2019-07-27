@@ -11,7 +11,7 @@ public class UserDao {
     public User login(User loginUser) {
 
         try {
-            String sql = "SELECT * FROM learn.user where username=? AND password=?";
+            String sql = "SELECT * FROM learn.user0 where username=? AND password=?";
 
             return template.queryForObject(
                     sql,
