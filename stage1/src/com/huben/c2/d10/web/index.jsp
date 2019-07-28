@@ -10,14 +10,16 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/jquery-2.1.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-    </script>
+
 </head>
 <body>
+
+<div>${user.name}, 欢迎您</div>
 <div align="center">
     <a
-            href="${pageContext.request.contextPath}/userListServlet" style="text-decoration:none;font-size:33px">查询所有用户信息
+            href="${pageContext.request.contextPath}/findUserByPageServlet" style="text-decoration:none;font-size:33px">查询所有用户信息
     </a>
 </div>
+
 </body>
 </html>
