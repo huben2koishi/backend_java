@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01原生AJAX</title>
+</head>
+<body>
+
+<input type="button" value="发送异步请求" onclick="send()">
+<div class="myDiv"></div>
+
+<script>
+    function send() {
+        let xmlHttp;
+        if (window.XMLHttpRequest) {
+            xmlHttp = new XMLHttpRequest();
+        } else {
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlHttp.open('post', 'ajaxServlet', true);
+        xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;");
+        xmlHttp.send("username=tom");
+
+        xmlHttp.onreadystatechange = function () {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                document.getElementById("myDiv").innerHTML = xmlHttp.responseText;
+            }
+        }
+    }
+</script>
+</body>
+</html>
