@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>register</title>
+
+</head>
+<body>
+
+<form action="">
+    <label for="username"></label>
+    <input type="text" placeholder="请输入用户名" id="username" name="username">
+    <span id="username_msg"></span>
+    <br>
+    <label for="password"></label>
+    <input type="password" placeholder="请输入密码" id="password" name="password">
+    <br>
+    <input type="submit" value="注册">
+</form>
+
+
+<script>
+    document.getElementById("username").onblur = function () {
+        let user_msg = document.getElementById("username_msg");
+
+        let val = this.value.trim();
+
+        if (val == null || val == "") {
+            user_msg.style.color = "red";
+            user_msg.innerHTML = "请填写用户名";
+        } else if (val.length <= 16 && val.length >= 3) {
+            fetch("/d13/checkUsernameServlet?username=" + val)
+                .then(data => data.text())
+                .then(data => JSON.parse(data))
+                .then(data => {
+                    if (data.userExist) {
+                           user_msg.style.color = "red";
+                        user_msg.innerHTML = data.userMsg;
+                    } else {
+                        user_msg.style.color = "green";
+                        user_msg.innerHTML = data.userMsg;
+                    }
+                });
+        } else {
+            user_msg.style.color = "red";
+            user_msg.innerHTML = "用户名长度应在3-16之间";
+        }
+    }
+
+</script>
+
+</body>
+</html>
